@@ -1,19 +1,19 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
+
 const team = new Schema({
-  tHead: {
-    type: Object,
-  },
-  tBodyEquipos: {
-    type: Object,
-  },
-  tBodyPuntos: {
-    type: Object,
-  },
-  tBodyImg: {
-    type: Object,
-  },
-  
+  POSICION:  Number,
+  IMG: String,
+  NOMBRE: String,
+  NOMBREMOVIL: String,
+  PJ: Number,
+  PG: Number,
+  PE: Number,
+  PP: Number,
+  GF: Number,
+  GC: Number,
+  DG: Number,
+  PTS: Number
 },{
   versionKey: false,
   timestamps: true,

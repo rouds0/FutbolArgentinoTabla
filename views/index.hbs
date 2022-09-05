@@ -36,10 +36,45 @@
             {{> thead}}
         </thead>
         <tbody>
-            {{#tabla tbodyPuntos tbody tbodyImg}}
-            {{/tabla}}
+            {{#each equipos}}
+            <tr>
+                <td>
+                    {{this.POSICION}}
+                </td>
+                <td class="{{colorFondo this ../mayorNumero}}">
+                    <img src="{{this.IMG}}" alt="{{this.NOMBRE}}">
+                    <span class="textoNoMovil">{{this.NOMBRE}}</span>
+                    <span class="textoMovil">
+                        {{this.NOMBREMOVIL}}
+                    </span>
+                </td>
+                <td>
+                    <span>{{this.PJ}}</span>
+                </td>
+                <td>
+                    <span>{{this.PG}}</span>
+                </td>
+                <td>
+                    <span>{{this.PE}}</span>
+                </td>
+                <td>
+                    <span>{{this.PP}}</span>
+                </td>
+                <td class="movil">
+                    <span >{{this.GF}}</span>
+                </td>
+                <td class="movil">
+                    <span >{{this.GC}}</span>
+                </td>
+                <td class="movil">
+                    <span >{{this.DG}}</span>
+                </td>
+                <td>
+                    <span>{{this.PTS}}</span>
+                </td>
+            </tr>
+            {{/each}}
         </tbody>
     </table>
-    
 </body>
 </html>

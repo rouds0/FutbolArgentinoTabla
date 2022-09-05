@@ -8,10 +8,7 @@ table{
     border: 1px solid #ccc;
     font-size: 1.2em;
     height: 50vh;
-    width: 50vw;
-    max-width: 1500px;
-    max-height: 1500px;
-    
+    width: 70vw;
 }
 table>thead>tr>th{
     border: 1px solid #ccc;
@@ -19,9 +16,10 @@ table>thead>tr>th{
     background: #a7a7a7;
     padding: 0;
 }
-table>tbody>tr>td{
+tbody>tr>td{  
     border: 1px solid #ccc;
     padding: 10px;
+    width: 1000px !important;
 }
 .container{
     display: flex;
@@ -48,7 +46,7 @@ table>tbody>tr>td{
     }
     table{
         height: 50vh;
-        width: 50vw;
+        width: 70vw;
         max-width: 500px;
         max-height: 500px;
     }
@@ -128,7 +126,7 @@ table>tbody>tr>td{
     }
     table{
         height: 50vh;
-        width: 50vw;
+        width: 65vw;
         max-width: 1500px;
         max-height: 1500px;
     }
