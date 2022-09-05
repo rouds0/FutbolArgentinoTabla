@@ -17,7 +17,7 @@
     "express-handlebars": "6.0.6",
     "handlebars": "4.7.7",
     "handlebars-helpers": "0.10.0",
-    "mongoose": "6.4.5",
+    "mongoose": "6.4.6",
     "request": "2.88.2",
     "utf8": "^3.0.0"
 
