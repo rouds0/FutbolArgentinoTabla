@@ -40,7 +40,7 @@ request({uri:'https://www.futbolargentino.com/primera-division/tabla-de-posicion
             PTS: puntos
           }
           
-          await team.findOneAndUpdate(equipos, { status: request.status }, { upsert: true });
+          await team.findOneAndUpdate({NOMBRE:nombreEquipo},equipos, { upsert: true });
 
       })
   }

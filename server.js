@@ -8,7 +8,6 @@ const path = require('path')
 const Handlebars = require('handlebars')
 const hbs = require('express-handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
-const viewPath = path.resolve(__dirname, "views", "helpers")
 
 mongoose.connect(mongoConnect, {enableUtf8Validation: true}, {
   useNewUrlParser: true, 
@@ -35,12 +34,12 @@ hbs.engine({ extname: 'hbs',
             return "colorVerde"
           }
           
-          else if(obj.POSICION >= num-4)
+          else if(obj.POSICION > num-4)
           {
             
             return "colorRojo"
           }
-          return ;
+          return "none";
       })
       
       }
@@ -48,7 +47,7 @@ hbs.engine({ extname: 'hbs',
 
 
 app.set('view engine', 'hbs')
-
+app.use(express.static("public/images"));
 
 app.get("/",  async(req, res) =>{
   try {
