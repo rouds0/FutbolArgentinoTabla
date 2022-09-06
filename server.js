@@ -1,6 +1,6 @@
 const team=require('./models/Teams');
 var express = require("express");
-const mongoConnect=require('dotenv').config().parsed.MONGO;
+require("dotenv");
 var app = express();
 var mongoose = require("mongoose");
 const datos=require("./controller/index")
@@ -9,7 +9,7 @@ const Handlebars = require('handlebars')
 const hbs = require('express-handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 
-mongoose.connect(mongoConnect, {enableUtf8Validation: true}, {
+mongoose.connect(process.env.MONGO, {enableUtf8Validation: true}, {
   useNewUrlParser: true, 
   useUnifiedTopology: true,
 }).then(()=>{
